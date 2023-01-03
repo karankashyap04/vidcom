@@ -28,17 +28,17 @@ io.on("connection", (socket) => {
   });
 
   socket.on("MAKE_CALL", (data) => {
-    const { userToCall, from, name, signalData } = data;
+    const { userToCall, from, callerName, signalData } = data;
     io.to(userToCall).emit("RECEIVE_CALL", {
       signalData: signalData,
       from: from,
-      name: name,
+      callerName: callerName,
     });
   });
 
   socket.on("ANSWER_CALL", (data) => {
-    const { to, signal } = data;
-    io.to(data.to).emit("ANSWERED_CALL", signal);
+    const { to, signalData } = data;
+    io.to(to).emit("ANSWERED_CALL", signalData);
   });
 });
 
