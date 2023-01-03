@@ -4,10 +4,12 @@ import Notifications from "./components/Notifications";
 import Options from "./components/Options";
 import Video from "./components/Video";
 
+import "./styles/App.css";
+
 export default function App() {
   return (
-    <div>
-      <AppBar position="static">
+    <div className="app-container">
+      <AppBar position="static" className="app-bar">
         <Typography variant="h2" align="center">
           VidCom
         </Typography>
