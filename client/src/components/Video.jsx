@@ -15,7 +15,7 @@ export default function Video() {
   } = useContext(SocketContext);
   return (
     <div className="container">
-      <div className="row">
+      <div className="row display-row">
         {stream ? (
           <VideoDisplay videoRef={myVideo} isMuted={true} username={username} />
         ) : null}
@@ -33,7 +33,7 @@ export default function Video() {
 
 function VideoDisplay({ videoRef, isMuted, username }) {
   return (
-    <div className="col col-lg-6 col-md-6 col-sm-12">
+    <div className="col col-lg-6 col-md-6 col-sm-12 display">
       <Paper className="video-container">
         <Typography variant="h5" gutterBottom>
           {username || "Name"}

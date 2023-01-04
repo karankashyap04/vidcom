@@ -34,6 +34,7 @@ export function ContextProvider({ children }) {
     });
 
     socket.on("RECEIVE_CALL", (data) => {
+      console.log("received a call message");
       const { from, callerName, signalData } = data;
       setCall({
         from: from,
@@ -61,9 +62,11 @@ export function ContextProvider({ children }) {
   }
 
   function makeCall(id) {
+    console.log("make call");
     const peer = new Peer({ initiator: true, trickle: false, stream: stream });
 
     peer.on("signal", (data) => {
+      console.log("going to emit");
       socket.emit("MAKE_CALL", {
         from: mySocketId,
         userToCall: id,
@@ -99,6 +102,7 @@ export function ContextProvider({ children }) {
         isCallAccepted,
         isCallEnded,
         username,
+        setUsername,
         myVideo,
         otherVideo,
         answerCall,

@@ -1,0 +1,23 @@
+.options-container {
+  width: 70%;
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-paper {
+  background-color: white;
+  border: 1px solid black;
+  padding: 3%;
+}
+
+.options-button {
+  margin-top: 2% !important;
+}
+
+.copy-id {
+  padding: 2%;
+  margin-top: 2% !important;
+}

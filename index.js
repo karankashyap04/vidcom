@@ -28,6 +28,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("MAKE_CALL", (data) => {
+    console.log("call made");
     const { userToCall, from, callerName, signalData } = data;
     io.to(userToCall).emit("RECEIVE_CALL", {
       signalData: signalData,

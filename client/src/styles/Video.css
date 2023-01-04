@@ -1,11 +1,19 @@
 .video-container {
   background-color: white;
-  padding: 3%;
-  margin: 5%;
+  padding: 1%;
+  margin: 3%;
   border: 1px solid black;
   text-align: center;
 }
 
+.display-row {
+  text-align: center;
+}
+
+.display {
+  margin: auto;
+}
+
 .video {
-  width: 90%;
+  width: 80%;
 }
