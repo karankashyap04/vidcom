@@ -1,0 +1,11 @@
+.video-container {
+  background-color: white;
+  padding: 3%;
+  margin: 5%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.video {
+  width: 90%;
+}
